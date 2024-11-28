@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building the application...'
-            }
-        }
         stage('Cloner le Code') {
             steps {
                 git 'https://github.com/zhengsunny2/docker-jenkins-demo.git'
@@ -43,9 +38,6 @@ pipeline {
                     message "Voulez-vous déployer en production ?"
                     ok "Déployer"
                 }
-            }
-            steps {
-                echo 'Déploiement en cours...'
             }
             steps {
                 script {
