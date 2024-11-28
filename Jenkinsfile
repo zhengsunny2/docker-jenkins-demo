@@ -38,7 +38,6 @@ pipeline {
                     message 'Voulez-vous déployer en production ?'
                     ok 'Déployer'
                 }
-            }
             steps {
                 script {
                     sh 'docker rm -f myapp-prod || true'
