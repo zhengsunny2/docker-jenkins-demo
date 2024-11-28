@@ -34,8 +34,8 @@ pipeline {
 
         stage('Déployer en Production') {
             when {
-                input {
-                    message 'Voulez-vous déployer en production ?',
+                input 
+                    message 'Voulez-vous déployer en production ?'
                     ok 'Déployer'
                 }
             }
